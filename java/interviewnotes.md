@@ -9,6 +9,7 @@
    Java 语言提供了一种稍弱的同步机制,即 volatile 变量.用来确保将变量的更新操作通知到其他线程,保证了新值能立即同步到主内存,以及每次使用前立即从主内存刷新. 当把变量声明为volatile类型后,编译器与运行时都会注意到这个变量是共享的. 非线程安全（如valatile++）
 5. string和stringbuffer的区别？  
    String final类不能被继承（String a ="aaa";假设a指向地址0x0001, a="bbb";假设a指向地址0x0005,因此String的操作都是改变赋值地址而不是改变值操作;stringbuffer 线程安全可变，如append  
+
 6.sleep和wait的区别  
   sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放锁
 7.类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么  
