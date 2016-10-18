@@ -12,7 +12,7 @@
 6. sleep和wait的区别    
    sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放锁
 7. 类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么    
-   不能继承多个类class C extends A,B,单继承，可以通过class A extends B class C extends B 从而实现C继承A,B，可以多个实现接口
+   不能继承多个类class C extends A,B,单继承，可以通过class A extends B class C extends B 从而实现C继承A,B，可以多个实现接口）
 8.抽象类和接口，可以有构造函数么，可以有main函数运行么
 9.对象晋升到老年代的条件是什么
 10.Lock与synchronized 的区别
