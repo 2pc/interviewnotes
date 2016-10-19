@@ -57,8 +57,8 @@ sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放
 28.数据库隔离级别有哪些，各自的含义是什么，Mysql默认的隔离级别是是什么
 >
 *. Read Uncommitted（读取未提交内容)   所有事务都可以看到其他未提交事务的执行结果，读取为提交的数据，也称之为脏读（Dirty Read）  
-*. Read Committed（读取提交内容，读已提交)  大多数数据库系统的默认隔离级别（MySQL默认的是可重复读Repeatable Read），一个事务只能看见已经提交事务所做的改变，不可重复读，因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。  
-*. Repeatable Read（可重读）MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行；幻读 （Phantom Read），问题：幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。  
+*. Read Committed（读取提交内容，读已提交)  大多数数据库系统的默认隔离级别（MySQL默认的是可重复读Repeatable Read），一个事务只能看见已经提交事务所做的改变，不可重复读，因为同一事务的其他实例（一个客户端多次读取，其他客户端更新）在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。  
+*. Repeatable Read（可重读）MySQL的默认事务隔离级别，它确保同一事务的多个实例，多个客户端同时操作在并发读取数据时，会看到同样的数据行；幻读 （Phantom Read），问题：幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。  
 *. Serializable（可串行化）
 ![Mysql中四种隔离级别](https://github.com/2pc/interviewnotes/blob/master/images/mysql.png)
 
