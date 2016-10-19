@@ -1,25 +1,26 @@
 
 1. String类能被继承吗，为什么  
 >
-    不能，String是final的类型类
+不能，String是final的类型类
+
 2. HashMap是线程安全的吗,并发下使用的Map是什么，他们内部原理是什么  
 >
-   HashMap是非线程安全的类，并发Map有ConcurrentHashMap，ConcurrentSkipListMap（key有序）
+HashMap是非线程安全的类，并发Map有ConcurrentHashMap，ConcurrentSkipListMap（key有序）
 3. 多线程的几种实现方式  
 >
-   继承Thread,  实现Runnable接口，ExecutorService,Executors,Callable,Future,ThreadPoolExecutor
+继承Thread,  实现Runnable接口，ExecutorService,Executors,Callable,Future,ThreadPoolExecutor
 4. volatile的作用，能代替锁么
 >
-   Java 语言提供了一种稍弱的同步机制,即 volatile 变量.用来确保将变量的更新操作通知到其他线程,保证了新值能立即同步到主内存,以及每次使用前立即从主内存刷新. 当把变量声明为volatile类型后,编译器与运行时都会注意到这个变量是共享的. 非线程安全（如valatile++）
+Java 语言提供了一种稍弱的同步机制,即 volatile 变量.用来确保将变量的更新操作通知到其他线程,保证了新值能立即同步到主内存,以及每次使用前立即从主内存刷新. 当把变量声明为volatile类型后,编译器与运行时都会注意到这个变量是共享的. 非线程安全（如valatile++）
 5. string和stringbuffer的区别？  
 >
-   String final类不能被继承（String a ="aaa";假设a指向地址0x0001, a="bbb";假设a指向地址0x0005,因此String的操作都是改变赋值地址而不是改变值操作;stringbuffer 线程安全可变，如append）
+String final类不能被继承（String a ="aaa";假设a指向地址0x0001, a="bbb";假设a指向地址0x0005,因此String的操作都是改变赋值地址而不是改变值操作;stringbuffer 线程安全可变，如append）
 6. sleep和wait的区别   
-> 
-   sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放锁
+>
+sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放锁
 7. 类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么  
->  
-   不能继承多个类class C extends A,B,单继承，可以通过class A extends B class C extends B 从而实现C继承A,B，可以多个实现接口）
+>
+不能继承多个类class C extends A,B,单继承，可以通过class A extends B class C extends B 从而实现C继承A,B，可以多个实现接口）
 8.抽象类和接口，可以有构造函数么，可以有main函数运行么
 >
 9.对象晋升到老年代的条件是什么
