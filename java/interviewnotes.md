@@ -25,10 +25,12 @@ sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放
 
 7. 类可以继承多个类么，接口可以继承多个接口么,类可以实现多个接口么  
 >
-不能继承多个类class C extends A,B,单继承，可以通过class A extends B class C extends B 从而实现C继承A,B，可以多个实现接口）
+ 不能继承多个类class C extends A,B,单继承，可以通过class A extends B class C extends B 从而实现C继承A,B，可以多个实现接口），接口可以继承接口
 
 8.抽象类和接口，可以有构造函数么，可以有main函数运行么
 >
+抽象类：如果一个类(class)包含一个或多个抽象方法，该类必须被限定为抽象的，可以有main函数
+接口，interface关键字产生一个完全抽象的类，不提供任何具体实现，允许创建者确定方法名，参数列表，返回类型。也可以包含域（这些域隐式的是static和final的）
 
 9.对象晋升到老年代的条件是什么
 >
