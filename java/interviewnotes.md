@@ -60,7 +60,7 @@ sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放
 *. Read Committed（读取提交内容，读已提交)  大多数数据库系统的默认隔离级别（MySQL默认的是可重复读Repeatable Read），一个事务只能看见已经提交事务所做的改变，不可重复读，因为同一事务的其他实例在该实例处理其间可能会有新的commit，所以同一select可能返回不同结果。  
 *. Repeatable Read（可重读）MySQL的默认事务隔离级别，它确保同一事务的多个实例在并发读取数据时，会看到同样的数据行；幻读 （Phantom Read），问题：幻读指当用户读取某一范围的数据行时，另一个事务又在该范围内插入了新行，当用户再读取该范围的数据行时，会发现有新的“幻影” 行。InnoDB和Falcon存储引擎通过多版本并发控制（MVCC，Multiversion Concurrency Control）机制解决了该问题。  
 *. Serializable（可串行化）
-
+![Mysql中四种隔离级别](https://github.com/2pc/interviewnotes/blob/master/images/mysql.png)
 29.高并发下，如何做到安全的修改同一行数据，乐观锁和悲观锁是什么，INNODB的行级锁有哪2种，解释其含义
 30.SQL优化的一般步骤是什么，怎么看执行计划，如何理解其中各个字段的含义，索引的原理？
 31.设计一个秒杀系统，30分钟没付款就自动关闭交易
