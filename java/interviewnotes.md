@@ -56,9 +56,9 @@ sleep()属于Thread，sleep()没有释放锁，；而wait()属于Object，释放
 27.TIME_WAIT和CLOSE_WAIT的区别
 28.数据库隔离级别有哪些，各自的含义是什么，Mysql默认的隔离级别是是什么
 >
-*. Read Uncommitted（读取未提交内容）
-*. Read Committed（读取提交内容）
-*. Repeatable Read（可重读）
+*. Read Uncommitted（读取未提交内容)   所有事务都可以看到其他未提交事务的执行结果，读取为提交的数据，也称之为脏读Dirty Read）
+*. Read Committed（读取提交内容)  
+*. Repeatable Read（可重读）  
 *. Serializable（可串行化）
 
 29.高并发下，如何做到安全的修改同一行数据，乐观锁和悲观锁是什么，INNODB的行级锁有哪2种，解释其含义
