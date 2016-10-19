@@ -6,8 +6,8 @@
 2. HashMap是线程安全的吗,并发下使用的Map是什么，他们内部原理是什么  
 >
 HashMap是非线程安全的类，并发Map有ConcurrentHashMap，ConcurrentSkipListMap（key有序）
-3. 多线程的几种实现方式  
 
+3. 多线程的几种实现方式  
 >
 继承Thread,  实现Runnable接口，ExecutorService,Executors,Callable,Future,ThreadPoolExecutor
 
