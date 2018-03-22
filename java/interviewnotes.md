@@ -1,7 +1,7 @@
 
 1. String类能被继承吗，为什么  
 >
-不能，String是final的类型类
+   不能，String是final的类型类
 
 2. HashMap是线程安全的吗,并发下使用的Map是什么，他们内部原理是什么  
 >
